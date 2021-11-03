@@ -47,15 +47,6 @@ public class AddFragment extends Fragment {
     }
 
 
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment AddFragment.
-     */
     // TODO: Rename and change types and number of parameters
     public static AddFragment newInstance(String param1, String param2) {
         AddFragment fragment = new AddFragment();
@@ -88,9 +79,6 @@ public class AddFragment extends Fragment {
 
 
 
-
-
-
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,20 +94,12 @@ public class AddFragment extends Fragment {
                 Receta receta3 = new Receta(txtCategoria.getText().toString());
                 dbHelper.insertContact(db, receta3);
 
+                //We check that it has been entered correctly in the database
                 Toast.makeText(getContext(), "correct entry", Toast.LENGTH_LONG).show();
 
             }
-
-
         });
-
-
-
      return root;
     }
-
-
-
-
 
 }

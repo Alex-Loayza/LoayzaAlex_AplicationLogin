@@ -1,5 +1,7 @@
 package com.example.aplicationlgin.Model;
 
+//We define the Receta class with getters and setters
+
 public class Receta {
 
         String receta="";

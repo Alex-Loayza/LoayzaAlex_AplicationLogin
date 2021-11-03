@@ -81,7 +81,7 @@ public class ListFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_list, container, false);
 
-
+        //We create a list of type String total the list of our class Receta
         ArrayList<String> recet = new ArrayList<>();
         ArrayList<Receta> array_receta = dbHelper.getAllData(db);
         for(Receta recetas : array_receta){

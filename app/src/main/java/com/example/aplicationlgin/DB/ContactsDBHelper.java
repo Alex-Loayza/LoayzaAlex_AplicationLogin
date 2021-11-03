@@ -54,7 +54,7 @@ public class ContactsDBHelper extends SQLiteOpenHelper {
             Log.i("sql","Database is closed");
         }
     }
-
+   //The inserts are made in the table
    @SuppressLint("Range")
    public ArrayList<Receta> getAllData(SQLiteDatabase db){
 
