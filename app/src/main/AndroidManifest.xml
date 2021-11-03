@@ -10,8 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AplicationLgin">
         <activity
+            android:name=".formulari"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/SplashTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
