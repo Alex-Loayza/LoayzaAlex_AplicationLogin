@@ -11,19 +11,18 @@ import android.util.Log;
 import com.example.aplicationlgin.Model.Receta;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class ContactsDBHelper extends SQLiteOpenHelper {
+public class RecetasDBHelper extends SQLiteOpenHelper {
 
     private SQLiteDatabase db;
     public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "contacts.db";
+    public static final String DATABASE_NAME = "recetas.db";
 
 
-    private static final String SQL_CREATE_ENTRIES = "CREATE TABLE " + ContactsContract.ContactsEntry.TABLE_NAME + "(" + ContactsContract.ContactsEntry.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + ContactsContract.ContactsEntry.COLUMN_NAME_TITLE + " TEXT)";
+    private static final String SQL_CREATE_ENTRIES = "CREATE TABLE " + tableRecetas.ContactsEntry.TABLE_NAME + "(" + tableRecetas.ContactsEntry.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + tableRecetas.ContactsEntry.COLUMN_NAME_TITLE + " TEXT)";
 
 
-    public ContactsDBHelper(Context context) {
+    public RecetasDBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
@@ -47,9 +46,9 @@ public class ContactsDBHelper extends SQLiteOpenHelper {
             ContentValues values = new ContentValues();
 
             //Insert the contacts getting all values
-            values.put(ContactsContract.ContactsEntry.COLUMN_NAME_TITLE, c.getReceta());
+            values.put(tableRecetas.ContactsEntry.COLUMN_NAME_TITLE, c.getReceta());
 
-            db.insert(ContactsContract.ContactsEntry.TABLE_NAME, null, values);
+            db.insert(tableRecetas.ContactsEntry.TABLE_NAME, null, values);
         }else{
             Log.i("sql","Database is closed");
         }
@@ -59,7 +58,7 @@ public class ContactsDBHelper extends SQLiteOpenHelper {
    public ArrayList<Receta> getAllData(SQLiteDatabase db){
 
             db=this.getWritableDatabase();
-            Cursor cursor=db.rawQuery("SELECT * FROM contacts", null);
+            Cursor cursor=db.rawQuery("SELECT * FROM recetas", null);
             ArrayList<Receta> rec= new ArrayList<>();
                if(cursor.moveToFirst()){
                    do{

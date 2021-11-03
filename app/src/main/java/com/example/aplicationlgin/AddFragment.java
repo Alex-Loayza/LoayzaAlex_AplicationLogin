@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.aplicationlgin.DB.ContactsDBHelper;
+import com.example.aplicationlgin.DB.RecetasDBHelper;
 import com.example.aplicationlgin.Model.Receta;
 
 /**
@@ -22,7 +22,7 @@ import com.example.aplicationlgin.Model.Receta;
  */
 public class AddFragment extends Fragment {
 
-    private ContactsDBHelper dbHelper;
+    private RecetasDBHelper dbHelper;
     private SQLiteDatabase db;
 
 
@@ -41,7 +41,7 @@ public class AddFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public AddFragment(ContactsDBHelper dbHelper, SQLiteDatabase db){
+    public AddFragment(RecetasDBHelper dbHelper, SQLiteDatabase db){
         this.db = db;
         this.dbHelper=dbHelper;
     }
@@ -95,7 +95,7 @@ public class AddFragment extends Fragment {
                 dbHelper.insertContact(db, receta3);
 
                 //We check that it has been entered correctly in the database
-                Toast.makeText(getContext(), "correct entry", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Correct entry", Toast.LENGTH_LONG).show();
 
             }
         });

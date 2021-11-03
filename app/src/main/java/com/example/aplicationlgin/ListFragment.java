@@ -10,9 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 
-import com.example.aplicationlgin.DB.ContactsDBHelper;
+import com.example.aplicationlgin.DB.RecetasDBHelper;
 import com.example.aplicationlgin.Model.Receta;
 
 import java.util.ArrayList;
@@ -23,11 +22,10 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class ListFragment extends Fragment {
-    private ContactsDBHelper dbHelper;
+    private RecetasDBHelper dbHelper;
     private SQLiteDatabase db;
 
-   // private ContactsDBHelper dbHelper;
-    //private SQLiteDatabase db;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -42,7 +40,7 @@ public class ListFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public ListFragment(ContactsDBHelper dbHelper, SQLiteDatabase db) {
+    public ListFragment(RecetasDBHelper dbHelper, SQLiteDatabase db) {
         this.dbHelper= dbHelper;
         this.db=db;
     }

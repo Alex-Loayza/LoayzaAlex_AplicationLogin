@@ -6,14 +6,12 @@ import androidx.fragment.app.Fragment;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
-import com.example.aplicationlgin.DB.ContactsDBHelper;
+import com.example.aplicationlgin.DB.RecetasDBHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.FormattableFlags;
 
 public class formulari extends AppCompatActivity {
 
-    private ContactsDBHelper dbHelper;
+    private RecetasDBHelper dbHelper;
     private SQLiteDatabase db;
 
     @Override
@@ -22,7 +20,7 @@ public class formulari extends AppCompatActivity {
         setContentView(R.layout.activity_formulari);
 
         //create of the dbHelper
-        dbHelper = new ContactsDBHelper(getApplicationContext());
+        dbHelper = new RecetasDBHelper(getApplicationContext());
         db = dbHelper.getWritableDatabase();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddFragment()).commit();
