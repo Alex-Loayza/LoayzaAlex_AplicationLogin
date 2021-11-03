@@ -95,8 +95,9 @@ public class AddFragment extends Fragment {
                 dbHelper.insertContact(db, receta3);
 
                 //We check that it has been entered correctly in the database
-                Toast.makeText(getContext(), "Correct entry", Toast.LENGTH_LONG).show();
-
+                for(int i =0; i<2; i++) {
+                    Toast.makeText(getContext(), "Correct entry", Toast.LENGTH_LONG).show();
+                }
             }
         });
      return root;
