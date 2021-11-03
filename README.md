@@ -32,6 +32,7 @@ This project is developed with android studio (java).
 * RecyclerView is a container that allows you to display a set of data.
 * ContactsDBHelpe extends from class SQLiteOpenHelper
 * ContactsContract structuring a database
+* Toast class message interaction
 
 ## App access
 * Username  "alex"
