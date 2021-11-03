@@ -22,4 +22,28 @@ The navigation of the application is done through the bottom navigation and the 
 
 It allows us to add elements to the local database
 
-[![add-Fragment.png](https://i.postimg.cc/0Q2RBVy7/add-Fragment.png)](https://postimg.cc/v1jN1L9m)
+[![add-Fragment.png](https://i.postimg.cc/50YdJ68t/add-Fragment.png)](https://postimg.cc/MMSrbZPk)
+
+## Technologies
+This project is developed with android studio (java).
+
+* SQLiteDatabase for the local storage
+* Fragment Manager
+* RecyclerView is a container that allows you to display a set of data.
+* ContactsDBHelpe extends from class SQLiteOpenHelper
+* ContactsContract structuring a database
+
+## App access
+* Username  "alex"
+* Password  "123"
+
+## Finished / unfinished Tasks
+- [x] Splash screen
+- [x] Bottom navigation
+- [X] Local Storage Sqlite
+- [X] Fragments
+- [X] Recycler View
+
+## Bibliography
+
+The basic structure of the application has been implemented, either as the login, navigation through the different fragments, etc. There is still a lot of work to be done on this project.
