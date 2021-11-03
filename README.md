@@ -12,4 +12,5 @@ Project in an initialization state, the user will have to login before entering 
 
 ## Screenshots
 To access the session, the user has to login
+
 [![login.png](https://i.postimg.cc/rpfxkHgj/login.png)](https://postimg.cc/JyBG3PfH)
